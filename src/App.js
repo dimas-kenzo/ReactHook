@@ -1,26 +1,25 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./components/Home/Home";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import PageNotFound from "./components/PageNotFound/PageNotFound";
-import MovieDetail from "./components/MovieDetail/MovieDetail";
-import "./App.scss";
+import "./App.css";
+import StateTutorial from "./UseState/StateTutorial";
+import RefTutorial from "./UseRef/RefTutorial";
+import RefTutorial2 from "./UseRef/RefTutorial2";
+import ReducerTutorial from "./UseReducer/ReducerTutorial";
+import EffectTutorial from "./UseEffect/EffectTutorial";
+import ContextTutorial from "./UseContext/ContextTutorial";
+// import ImperativeHandle from "./UseImperativeHandle/ImperativeHandle";
+import MemoTutorial from "./UseMemo/MemoTutorial";
+import CallBackTutorial from "./UseCallback/CallBackTutorial";
 
 function App() {
   return (
-    <div className="app">
-      <Router>
-        <Header></Header>
-        <div className="container">
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/movie/:imdbID" component={MovieDetail} />
-            <Route component={PageNotFound} />
-          </Switch>
-        </div>
-        <Footer />
-      </Router>
+    <div className="App">
+      <StateTutorial /><hr />
+      <RefTutorial /><RefTutorial2 /><hr />
+      <ReducerTutorial /><hr />
+      <EffectTutorial /><hr />
+      <ContextTutorial /><hr />
+      {/* <ImperativeHandle /><hr /> */}
+      <MemoTutorial /><hr />
+      <CallBackTutorial />
     </div>
   );
 }
